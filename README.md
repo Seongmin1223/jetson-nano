@@ -98,15 +98,16 @@
 
 ```mermaid
 flowchart TD
-    Camera[광시야각 카메라 입력]
-    Pre[영상 전처리]
-    Face[OpenCV 얼굴/눈/핸드 분석]
-    YOLO[YOLO 객체 감지]
-    Fusion[시계열 융합 / ML]
-    Alert[경고 출력 (HUD/버저/CAN)]
+    Camera["광시야각 카메라 입력"]
+    Pre["영상 전처리"]
+    Face["OpenCV 얼굴/눈/핸드 분석"]
+    YOLO["YOLO 객체 감지"]
+    Fusion["시계열 융합 / ML"]
+    Alert['경고 출력 (HUD/버저/CAN)']
 
     Camera --> Pre --> Face
     Pre --> YOLO
     Face --> Fusion
     YOLO --> Fusion
     Fusion --> Alert
+
